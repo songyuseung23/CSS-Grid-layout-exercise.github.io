@@ -1,0 +1,48 @@
+/* common */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    border: none;
+}
+
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+
+    /* disable text inflation algorithm on mobile platform */
+
+    /* for iOS Safari */
+    -webkit-text-size-adjust: none;
+    /* for other mobile browsers */
+    text-size-adjust: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+button,
+.clickable {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    text-underline-position: under;
+    text-decoration-thickness: 8px;
+}
